@@ -1,0 +1,39 @@
+/* Styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e2238; /* Matches the sidebar color */
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .search {
+    font-size: 1rem;
+  }
+  
+  .right-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .account, .dropdown, .logout {
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .logout {
+    font-weight: bold;
+    color: #ff5f6d;
+  }
+  
+  .right-options div:hover {
+    color: #36a2eb; /* Hover color */
+  }
+  
