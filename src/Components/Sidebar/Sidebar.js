@@ -1,15 +1,22 @@
+// src/Components/Sidebar/Sidebar.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false); // State to track if sidebar is expanded
+  const navigate = useNavigate(); // Hook for navigation
 
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded); // Toggle the sidebar state
   };
 
+  const handleNavigation = (path) => {
+    navigate(path); // Navigate to the specified path
+  };
+
   return (
-    <div className={`wrapper ${isExpanded ? 'expanded' : ''}`}>
+    <div className={`wrapper1 ${isExpanded ? 'expanded' : ''}`}>
       <aside id="sidebar" className={isExpanded ? 'expand' : ''}>
         <div className="d-flex">
           <button className="toggle-btn" type="button" onClick={toggleSidebar}>
@@ -20,29 +27,29 @@ const Sidebar = () => {
           </div>
         </div>
         <ul className="sidebar-nav">
-          <li className="sidebar-item">
+          <li className="sidebar-item" onClick={() => handleNavigation('/profile')}>
             <a href="#" className="sidebar-link">
               <i className="lni lni-user"></i>
               <span>Profile</span>
             </a>
           </li>
-          <li className="sidebar-item">
+          <li className="sidebar-item" onClick={() => handleNavigation('/')}>
             <a href="#" className="sidebar-link">
               <i className="lni lni-agenda"></i>
               <span>Dashboard</span>
             </a>
           </li>
-          <li class="sidebar-item">
-              <a href="#" class="sidebar-link">
-                  <i class="lni lni-popup"></i>
-                  <span>Report</span>
-              </a>
+          <li className="sidebar-item" onClick={() => handleNavigation('/report')}>
+            <a href="#" className="sidebar-link">
+              <i className="lni lni-popup"></i>
+              <span>Report</span>
+            </a>
           </li>
-          <li class="sidebar-item">
-              <a href="#" class="sidebar-link">
-                  <i class="lni lni-cog"></i>
-                  <span>Setting</span>
-              </a>
+          <li className="sidebar-item" onClick={() => handleNavigation('/settings')}>
+            <a href="#" className="sidebar-link">
+              <i className="lni lni-cog"></i>
+              <span>Settings</span>
+            </a>
           </li>
         </ul>
         <div className="sidebar-footer">
@@ -57,4 +64,5 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
 

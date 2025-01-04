@@ -24,8 +24,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.wrapper {
+.wrapper1 {
     display: flex;
+    background-color: rgb(179, 159, 159);
+
 }
 
 .main {

@@ -139,6 +139,7 @@
 .app-container {
   display: flex;
   height: 100vh; /* Full viewport height */
+
 }
 
 /* Sidebar styling */
@@ -154,11 +155,18 @@
 /* Main content styling */
 .main-content {
   flex-grow: 1;
-  background-color: #f4f4f4;
   padding:20px 20px 20px 20px; /* Remove top padding, keep left/right and bottom */
   box-sizing: border-box;
   overflow-y: auto;
   position: relative; /* Make sure content doesn't go behind the navbar */
+  background-color: rgb(224, 216, 216);
+
+   /*Background image styling */
+   background-image: url('./images/background.webp');
+   background-size: cover; /*Scale the image to cover the entire area*/
+   background-position: center; /*Center the image*/
+   background-repeat: no-repeat; /*Prevent the image from repeating*/
+   color: #000000; /*Optional: change text color for better contrast*/
 }
 
 /* Styling for the navbar */

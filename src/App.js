@@ -1,10 +1,14 @@
+// src/App.js
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Dashboard from "./Components/Dashboard/Dashboard";
-import ProblemsSolutions from "./Components/ProblemsSolutions/ProblemsSolutions"; // Make sure the path is correct
+import ProblemsSolutions from "./Components/ProblemsSolutions/ProblemsSolutions";
+import Profile from "./Components/Profile/Profile"; // Import Profile component
+import Report from "./Components/SecureEmbed/SecureEmbed"; // Import Report component
+import Settings from "./Components/Settings/Settings"; // Import Settings component
 import Sidebar from "./Components/Sidebar/Sidebar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Ensure you import Routes
-import "./App.css"; // Import the CSS for layout
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -37,6 +41,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Dashboard data={data} />} />
             <Route path="/sample-problems" element={<ProblemsSolutions />} />
+            <Route path="/profile" element={<Profile />} /> {/* Add Profile route */}
+            <Route path="/report" element={<Report />} /> {/* Add Report route */}
+            <Route path="/settings" element={<Settings />} /> {/* Add Settings route */}
           </Routes>
         </div>
       </div>
@@ -45,3 +52,4 @@ const App = () => {
 };
 
 export default App;
+
