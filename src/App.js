@@ -40,7 +40,7 @@ const App = () => {
         <div className="main-content">
           <Routes>
             <Route path="/" element={<Dashboard data={data} />} />
-            <Route path="/sample-problems" element={<ProblemsSolutions />} />
+            <Route path="/Q&A" element={<ProblemsSolutions />} />
             <Route path="/profile" element={<Profile />} /> {/* Add Profile route */}
             <Route path="/report" element={<Report />} /> {/* Add Report route */}
             <Route path="/settings" element={<Settings />} /> {/* Add Settings route */}

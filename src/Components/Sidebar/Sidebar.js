@@ -45,6 +45,12 @@ const Sidebar = () => {
               <span>Report</span>
             </a>
           </li>
+          <li className="sidebar-item" onClick={() => handleNavigation('/Q&A')}>
+            <a href="#" className="sidebar-link">
+              <i className="lni lni-agenda"></i>
+              <span>Q & A</span>
+            </a>
+          </li>
           <li className="sidebar-item" onClick={() => handleNavigation('/settings')}>
             <a href="#" className="sidebar-link">
               <i className="lni lni-cog"></i>
