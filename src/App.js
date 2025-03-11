@@ -7,6 +7,7 @@ import Profile from "./Components/Profile/Profile"; // Import Profile component
 import Report from "./Components/SecureEmbed/SecureEmbed"; // Import Report component
 import Settings from "./Components/Settings/Settings"; // Import Settings component
 import Sidebar from "./Components/Sidebar/Sidebar";
+import Predictions from "./Components/Predictions/Predictions";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -39,8 +40,9 @@ const App = () => {
         <Sidebar />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Dashboard data={data} />} />
+            <Route path="/dashboard" element={<Dashboard data={data} />} />
             <Route path="/Q&A" element={<ProblemsSolutions />} />
+            <Route path="/predictions" element={<Predictions />} />
             <Route path="/profile" element={<Profile />} /> {/* Add Profile route */}
             <Route path="/report" element={<Report />} /> {/* Add Report route */}
             <Route path="/settings" element={<Settings />} /> {/* Add Settings route */}

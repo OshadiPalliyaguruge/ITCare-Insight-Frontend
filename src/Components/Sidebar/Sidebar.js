@@ -33,7 +33,7 @@ const Sidebar = () => {
               <span>Profile</span>
             </a>
           </li>
-          <li className="sidebar-item" onClick={() => handleNavigation('/')}>
+          <li className="sidebar-item" onClick={() => handleNavigation('/dashboard')}>
             <a href="#" className="sidebar-link">
               <i className="lni lni-agenda"></i>
               <span>Dashboard</span>
@@ -41,13 +41,19 @@ const Sidebar = () => {
           </li>
           <li className="sidebar-item" onClick={() => handleNavigation('/report')}>
             <a href="#" className="sidebar-link">
-              <i className="lni lni-popup"></i>
-              <span>Report</span>
+            <i className="lni lni-bar-chart"></i>
+              <span>Analysis</span>
+            </a>
+          </li>
+          <li className="sidebar-item" onClick={() => handleNavigation('/predictions')}>
+            <a href="#" className="sidebar-link">
+             <i className="lni lni-stats-up"></i>
+              <span>Prediction</span>
             </a>
           </li>
           <li className="sidebar-item" onClick={() => handleNavigation('/Q&A')}>
             <a href="#" className="sidebar-link">
-              <i className="lni lni-agenda"></i>
+            <i className="lni lni-question-circle"></i>
               <span>Q & A</span>
             </a>
           </li>
@@ -58,7 +64,7 @@ const Sidebar = () => {
             </a>
           </li>
         </ul>
-        <div className="sidebar-footer">
+        <div className="sidebar-footer" onClick={() => handleNavigation('/')}>
           <a href="#" className="sidebar-link">
             <i className="lni lni-exit"></i>
             <span>Logout</span>
