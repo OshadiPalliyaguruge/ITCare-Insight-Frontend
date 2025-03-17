@@ -1,0 +1,96 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.sections-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the sections */
+  gap: 30px;
+}
+
+.section {
+  width: 100%; /* Default to full width */
+  max-width: 600px; /* Limit the width of the section */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px; /* Slightly larger font for title */
+  font-weight: bold;
+}
+
+.user-input-section {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  margin-bottom: 30px;
+  width: 100%; /* Ensure it takes full width of its container */
+}
+
+.prediction-form .form-group {
+  margin-bottom: 20px; /* Increase spacing between form groups */
+}
+
+.prediction-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Highlight border on focus */
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px; /* Rounded corners for the button */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.prediction-output {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e7f3ff;
+  border-left: 5px solid #007bff;
+  border-radius: 5px; /* Rounded corners for output section */
+}
+
+.output-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.output-result {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.chatbox-container {
+  margin-top: 30px;
+}
