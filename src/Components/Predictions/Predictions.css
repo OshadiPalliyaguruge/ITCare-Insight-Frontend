@@ -94,3 +94,13 @@
 .chatbox-container {
   margin-top: 30px;
 }
+
+.error-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffebee; /* Light red background */
+  border: 1px solid #ffcdd2; /* Light red border */
+  border-radius: 5px;
+  color: #c62828; /* Dark red text */
+  text-align: center;
+}
