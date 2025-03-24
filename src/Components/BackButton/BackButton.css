@@ -1,0 +1,49 @@
+.back-button {
+    position: fixed;
+    top: 1%;
+    left: 93%;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #c9c9c9;
+    border: 3px solid #031433;
+    border-radius: 0px; /* More rounded for floating action button */
+    padding: 10px 16px 10px 12px; /* Adjusted padding */
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 18px;
+    font-weight: 1000;
+    width: 6%;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    border: none;
+  }
+  
+  .back-button:hover {
+    background: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    color: #212529;
+  }
+  
+  .back-button:active {
+    transform: translateY(1px) scale(0.98);
+  }
+  
+  .back-icon {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.5px;
+  }
+  
+  /* Animation for attention (optional) */
+  @keyframes subtleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+  
+  .back-button:hover .back-icon {
+    animation: subtleBounce 1.5s infinite;
+  }
