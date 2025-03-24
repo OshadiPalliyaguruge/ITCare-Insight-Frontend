@@ -1,0 +1,76 @@
+/* Signup Popup Modal */
+.signup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Signup Form */
+.signup-wrapper {
+    width: 450px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    color: #333;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    background: white;
+    color: #2e2e2e;
+}
+
+/* Already Have an Account? (Left) | Login (Right) */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* "Already have an account?" (Left) */
+.already-account {
+    font-size: 16px;
+    color: #383838;
+}
+
+/* Login Link (Right) */
+.login-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

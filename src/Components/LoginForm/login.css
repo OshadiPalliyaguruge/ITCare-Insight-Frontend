@@ -1,0 +1,165 @@
+/* Centering the popup modal */
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Login Form */
+.login-wrapper {
+    width: 450px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    color: #333;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Form Titles */
+h1 {
+    font-size: 32px;
+    color: #0e2238;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    background: white;
+    color: #2e2e2e
+}
+
+/* Placeholder Text */
+.input-box input::placeholder {
+    color: #777;
+}
+
+/* Icons */
+.input-box .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 20px;
+}
+
+/* Forgot Password - Aligned Right */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Remember Me - Aligned Left */
+.remember-me {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.remember-me label {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Login Button */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+button[type="submit"] {
+    background-color: #213953;
+}
+
+/* Google Sign-In */
+.google-sign-in {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(190, 190, 190);
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.google-sign-in:hover {
+    background-color: #878d94;
+}
+
+/* Register Section - Left & Right Alignment */
+.register-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* "Don't have an account?" (Left) */
+.no-account {
+    font-size: 16px;
+    color: #383838;
+}
+
+/* Register Link (Right) */
+.register-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error-message {
+    color: #58030c;
+    font-size: 16px;
+    margin-top: 10px;
+}
