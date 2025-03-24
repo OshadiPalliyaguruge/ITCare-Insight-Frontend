@@ -132,9 +132,11 @@
 // };
 
 // export default Chatbox;
+
+
 import React, { useState } from 'react';
 import './Chatbox.css';
-import axios from 'axios'; // Import axios to make HTTP requests
+import axios from 'axios';
 
 const Chatbox = () => {
   const [messages, setMessages] = useState([]);
@@ -144,33 +146,83 @@ const Chatbox = () => {
     setInput(e.target.value);
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (!input.trim()) return;
+
+  //   setMessages((prev) => [...prev, { text: input, sender: 'user' }]);
+
+  //   try {
+  //     const response = await axios.post('http://localhost:5002/api/search', {
+  //       query: input
+  //     });
+
+  //     console.log("Full API Response:", response.data); // Debugging
+
+  //     const results = response.data.results || [];
+  //     console.log("Extracted Results:", results);
+  //     console.log("Response:", response); // Debugging
+
+  //     if (results.length === 0) {
+  //       setMessages((prev) => [...prev, { text: "No relevant answer found.", sender: 'bot' }]);
+  //     } else {
+  //       results.forEach((res) => {
+  //         setMessages((prev) => [...prev, { text: `**Q:** ${res.question}\n**A:** ${res.answer}`, sender: 'bot' }]);
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching solution:", error.response?.data || error.message);
+  //     setMessages((prev) => [...prev, { text: "There was an error fetching the solution.", sender: 'bot' }]);
+  //   }
+
+  //   setInput('');
+  // };
+
+  const toSentenceCase = (str) => {
+    if (!str) return "";
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
-
-    // Add user message to chat
+  
     setMessages((prev) => [...prev, { text: input, sender: 'user' }]);
-
+  
     try {
-      // Send input to backend to get the solution
-      const response = await axios.post('http://localhost:5000/api/problems-solutions', {
-        question: input
+      const response = await axios.post('http://localhost:5002/api/search', {
+        query: input
       });
-
-      const answer = response.data.answer || "Sorry, I couldn't find an answer to that.";
-
-      // Add bot response to chat
-      setTimeout(() => {
-        setMessages((prev) => [...prev, { text: answer, sender: 'bot' }]);
-      }, 1000);
+  
+      console.log("Full API Response:", response.data);
+  
+      const results = response.data.results || [];
+  
+      if (results.length === 0) {
+        setMessages((prev) => [...prev, { text: " No relevant answer found.", sender: 'bot' }]);
+      } else {
+        results.forEach((res) => {
+          setMessages((prev) => [...prev, {
+            text: (
+              <div>
+                <strong>❓ Question:</strong> {toSentenceCase(res.question)} <br />
+                <strong>✅ Answer:</strong> {toSentenceCase(res.answer)}
+              </div>
+            ),
+            sender: 'bot'
+          }]);
+        });
+      }
     } catch (error) {
-      console.error('Error fetching solution:', error);
-      setMessages((prev) => [...prev, { text: "There was an error fetching the solution.", sender: 'bot' }]);
+      console.error("Error fetching solution:", error.response?.data || error.message);
+      setMessages((prev) => [...prev, { text: "🚨 There was an error fetching the solution.", sender: 'bot' }]);
     }
-
-    setInput(''); // Clear input
+  
+    setInput('');
   };
-
+  
+  
+  
   return (
     <div className="chatbox">
       <div className="messages">

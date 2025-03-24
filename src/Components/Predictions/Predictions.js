@@ -416,6 +416,7 @@
 import React, { useEffect, useState } from 'react';
 import { ClipLoader } from 'react-spinners'; // Import the spinner
 import './Predictions.css'; // Custom CSS file for styling
+import BackButton from '../BackButton/BackButton';
 
 const Predictions = () => {
   const [userInput, setUserInput] = useState({
@@ -493,9 +494,9 @@ const Predictions = () => {
   };
 
   return (
-    <div className="container">
       <div className="sections-container">
         {/* Predict Assigned Group Section */}
+
         <div className="section user-input-section">
           <h3 className="section-title">Predict Assigned Group</h3>
           <form onSubmit={handleSubmit} className="prediction-form">
@@ -602,7 +603,7 @@ const Predictions = () => {
           )}
         </div>
       </div>
-    </div>
+ 
   );
 };
 

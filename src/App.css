@@ -136,13 +136,30 @@
   }
 } */
 /* Ensure the app container fills the screen */
+/* Main Container */
 .app-container {
   display: flex;
   height: 100vh; /* Full viewport height */
-
 }
 
-/* Sidebar styling */
+/* Apply background image only to specific pages */
+.bg-image .main-content {
+  background-image: url('./images/background.webp');
+  background-size: cover; /* Scale the image to cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: #000000; /* Optional: change text color for better contrast */
+}
+
+/* Apply solid color background to other pages */
+.bg-color .main-content {
+  /* background: linear-gradient(to right, #277575, #6d768d); Soft corporate gradient */
+  background: linear-gradient(to right, #3b4b4b, #6d768d); /* Soft corporate gradient */
+
+  color: #333;
+}
+
+/* Sidebar */
 .sidebar {
   width: 150px;
   background-color: #333;
@@ -152,32 +169,24 @@
   box-sizing: border-box;
 }
 
-/* Main content styling */
+/* Main content */
 .main-content {
   flex-grow: 1;
-  padding:20px 20px 20px 20px; /* Remove top padding, keep left/right and bottom */
+  padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
   position: relative; /* Make sure content doesn't go behind the navbar */
-  background-color: rgb(224, 216, 216);
-
-   /*Background image styling */
-   background-image: url('./images/background.webp');
-   background-size: cover; /*Scale the image to cover the entire area*/
-   background-position: center; /*Center the image*/
-   background-repeat: no-repeat; /*Prevent the image from repeating*/
-   color: #000000; /*Optional: change text color for better contrast*/
 }
 
-/* Styling for the navbar */
+/* Navbar */
 .navbar {
   background-color: #0e2238;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; /* Remove top padding */
-  height: 50px; /* Fixed height to align with .main-content padding */
+  padding: 0 20px;
+  height: 50px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -229,7 +238,7 @@
 
 /* Styling for h3 elements */
 h3 {
-  margin: 0; /* Remove default margin from h3 */
+  margin: 0;
 }
 
 /* Ensure responsiveness for mobile devices */
@@ -247,3 +256,11 @@ h3 {
       margin: 10px 0;
   }
 }
+
+/* Ensure main content expands fully when sidebar is hidden */
+.main-content.full-width {
+  width: 100%;
+  padding: 20px;
+}
+
+

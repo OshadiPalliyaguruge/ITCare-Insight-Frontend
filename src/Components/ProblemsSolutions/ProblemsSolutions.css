@@ -1,0 +1,341 @@
+/*------------------------------------ Add designs ------------------------------------*/
+/* .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .problems-solutions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .problems-solutions-table th, 
+  .problems-solutions-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .problems-solutions-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  .user-input-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .prediction-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .prediction-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .prediction-output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e7f3ff;
+    border-left: 5px solid #007bff;
+  }
+  
+  .output-title {
+    font-weight: bold;
+  }
+  
+  .output-result {
+    font-size: 18px;
+    color: #007bff;
+  } */
+  
+
+
+  /*-------------------------- Add  cards ------------------------*/
+  /* .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .problem-solution-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .problem {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .solution {
+    font-size: 16px;
+    color: #007bff;
+  }
+  
+  .user-input-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .prediction-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .prediction-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .prediction-output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e7f3ff;
+    border-left: 5px solid #007bff;
+  }
+  
+  .output-title {
+    font-weight: bold;
+  }
+  
+  .output-result {
+    font-size: 18px;
+    color: #007bff;
+  }
+   */
+
+
+   /* ProblemsSolutions.css */
+.ps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.ps-main-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.ps-main-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #277575, #6d768d);
+}
+
+.ps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.ps-card {
+  background: rgb(235, 235, 235);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ps-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.ps-card-header {
+  background: linear-gradient(135deg, #cccccc, #c2c2c2);
+  color: rgb(15, 15, 15);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.ps-card-badge {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  background: #ffcece;
+  color: rgb(17, 16, 16);
+  padding: 0.25rem 0.75rem 0.25rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.ps-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ps-card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ps-solution-container {
+  background: #dfdfdf;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.ps-solution-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.ps-solution-text {
+  margin: 0;
+  color: #34495e;
+  line-height: 1.5;
+}
+
+.ps-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ps-action-btn {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.ps-action-btn:hover {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.ps-chatbox-container {
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ps-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ps-container {
+    padding: 1rem;
+  }
+}

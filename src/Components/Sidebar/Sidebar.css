@@ -31,7 +31,7 @@ body {
 }
 
 .main {
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     overflow: hidden;
     transition: all 0.35s ease-in-out;
@@ -58,6 +58,7 @@ body {
     cursor: pointer;
     border: 0;
     padding: 1rem 1.5rem;
+    width: auto;
 }
 
 .toggle-btn i {
@@ -66,15 +67,16 @@ body {
 }
 
 .sidebar-logo {
-    margin: auto 0;
+    margin: 3% 0;
     text-decoration: none;
 }
 
 .sidebar-logo a {
     color: #FFF;
-    font-size: 1.15rem;
+    font-size: 20px;
     font-weight: 600;
     text-decoration: none;
+    margin-left: 0%;
 }
 
 #sidebar:not(.expand) .sidebar-logo,
@@ -91,14 +93,14 @@ a.sidebar-link {
     padding: .625rem 1.625rem;
     color: #FFF;
     display: block;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     white-space: nowrap;
     border-left: 3px solid transparent;
     text-decoration: none;
 }
 
 .sidebar-link i {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-right: .75rem;
 }
 
@@ -146,3 +148,4 @@ a.sidebar-link:hover {
     transform: rotate(45deg);
     transition: all .2s ease-out;
 }
+

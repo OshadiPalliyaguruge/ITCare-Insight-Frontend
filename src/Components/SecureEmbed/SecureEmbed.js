@@ -9,11 +9,11 @@ const SecureEmbed = () => {
     const powerBIEmbedUrl = "https://app.powerbi.com/reportEmbed?reportId=5591385c-a50a-40d9-9cda-2e3e95970fa9&autoAuth=true&ctid=5bc377d1-dbba-446e-b46f-fc82af1875fd";
 
     return (
-        <div style={{ width: '100%', height: '100vh', overflow: 'hidden' }}>
+        <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
             <iframe
                 src={powerBIEmbedUrl}
                 width="100%"
-                height="95%"
+                height="100%"
                 frameBorder="0"
                 allowFullScreen
                 title="Secure Power BI Report"

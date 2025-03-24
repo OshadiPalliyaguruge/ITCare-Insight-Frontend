@@ -1276,7 +1276,6 @@ const peakMonthsConfig = useMemo(() => ({
             <h4>In Progress Incidents</h4>
             <p>{dataQuality.inProgressIssues}</p>
           </div>
-
         </div>
 
 

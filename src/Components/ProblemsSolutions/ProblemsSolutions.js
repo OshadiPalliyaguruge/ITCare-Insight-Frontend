@@ -418,82 +418,53 @@
 // export default ProblemsSolutions;
 
 
-
-//------------------------------------ Organized structure ------------------------------------
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Chatbox from '../Chatbox/Chatbox';
-import './ProblemsSolutions.css'; // Custom CSS file for styling
+import './ProblemsSolutions.css';
+
+const toSentenceCase = (str) => {
+  if (!str) return "";
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+};
 
 const ProblemsSolutions = () => {
   const [problemsSolutions, setProblemsSolutions] = useState([]);
-  const [userInput, setUserInput] = useState({
-    operationalTier: '',
-    summary: '',
-    priority: '',
-    organization: '', 
-    department: ''
-  });
-  const [predictedGroup, setPredictedGroup] = useState('');
 
   useEffect(() => {
-    // Fetch sample problems and solutions from the backend API
     fetch('http://localhost:5000/api/problems-solutions')
       .then((response) => response.json())
       .then((data) => {
-        setProblemsSolutions(data);
+        const formattedData = data.map((item) => ({
+          question: toSentenceCase(item.question),
+          answer: toSentenceCase(item.answer),
+        }));
+        setProblemsSolutions(formattedData);
       })
-      .catch((error) => {
-        console.error('Error fetching problems and solutions:', error);
-      });
+      .catch((error) => console.error('Error fetching problems and solutions:', error));
   }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserInput({ ...userInput, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Send user input to the backend for prediction
-    fetch('http://localhost:5000/api/predict', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(userInput)
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setPredictedGroup(data.predicted_group);
-      })
-      .catch((error) => {
-        console.error('Error fetching prediction:', error);
-      });
-  };
-
   return (
-    <div className="container">
-      <div className="sections-container">
-        {/* Sample Problems and Solutions */}
+    <div className="ps-container">
+      <h2 className="ps-main-title">Common Issues & Solutions</h2>
       
-          <h3 className="section-title">Sample Problems and Solutions</h3>
-          <div className="problem-solution-cards">
-            {problemsSolutions.map((item, index) => (
-              <div key={index} className="card">
-                <div className="card-header">
-                  <h5 className="card-title">Problem {index + 1}</h5>
-                </div>
-                <div className="card-body">
-                  <p className="problem">{item.question}</p>
-                  <hr />
-                  <p className="solution">{item.answer}</p>
-                </div>
+      <div className="ps-grid">
+        {problemsSolutions.map((item, index) => (
+          <div key={index} className="ps-card">
+            <div className="ps-card-header">
+              <span className="ps-card-badge">Issue {index + 1}</span>
+              <h3 className="ps-card-title">{item.question}</h3>
+            </div>
+            <div className="ps-card-body">
+              <div className="ps-solution-container">
+                <div className="ps-solution-label">Solution</div>
+                <p className="ps-solution-text">{item.answer}</p>
               </div>
-            ))}
+            </div>
           </div>
-     
+        ))}
       </div>
 
-      {/* Chatbox */}
-      <div className="chatbox-container">
+      <div className="ps-chatbox-container">
         <Chatbox />
       </div>
     </div>

@@ -2,23 +2,23 @@
 body {
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #1a1a1a;
  
 }
 
 .wrapper {
   max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
-  background-color: rgb(255, 255, 255); 
+  padding: 2%;
+  background-color: rgba(209, 209, 209,0.9); 
   /* background-color: rgb(224, 216, 216); */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(228, 229, 230,0.1);
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-
+border-radius: 0.6%;
 }
 .main-content1 {
-  background-color: rgb(255, 255, 255); 
+  background-color: rgba(209, 209, 209,0.3); 
   /* background-color: rgb(224, 216, 216); */
 
 
@@ -27,7 +27,7 @@ body {
 h2 {
   text-align: center;
   font-size: 24px;
-  color: #0c0c0c;
+  color: #2b2a2a;
 }
 .dashboard-heading {
   margin-top: 1%;
@@ -64,7 +64,7 @@ h2 {
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 18px;
   color: #7f8c8d;
 }
 
@@ -151,3 +151,57 @@ h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
+/* Dashboard.css */
+.navigation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.navigation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.navigation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-color: #d0d0d0;
+}
+
+.navigation-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.navigation-card p {
+  font-size: 16px;
+  color: #4a5568;
+  margin: 0;
+}
+
+.card-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Card-specific colors */
+.card-basic { background-color: #fffcf2; border-color: #ffeb7b; }
+.card-advanced { background-color: #e2dcfa; border-color: #b0aeb8; }
+.card-predictions { background-color: #e2fff1; border-color: #009c53; }
+.card-faq { background-color: #fff9f9; border-color: #fecaca; }
+.card-suggestions { background-color: #d8e9ff; border-color: #82baff; }

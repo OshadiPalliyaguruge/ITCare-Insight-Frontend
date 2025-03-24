@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Sidebar.css';
+import BackButton from '../BackButton/BackButton';
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false); // State to track if sidebar is expanded
@@ -27,12 +28,12 @@ const Sidebar = () => {
           </div>
         </div>
         <ul className="sidebar-nav">
-          <li className="sidebar-item" onClick={() => handleNavigation('/profile')}>
+          {/* <li className="sidebar-item" onClick={() => handleNavigation('/profile')}>
             <a href="#" className="sidebar-link">
               <i className="lni lni-user"></i>
               <span>Profile</span>
             </a>
-          </li>
+          </li> */}
           <li className="sidebar-item" onClick={() => handleNavigation('/dashboard')}>
             <a href="#" className="sidebar-link">
               <i className="lni lni-agenda"></i>
@@ -57,12 +58,18 @@ const Sidebar = () => {
               <span>Q & A</span>
             </a>
           </li>
-          <li className="sidebar-item" onClick={() => handleNavigation('/settings')}>
+          {/* <li className="sidebar-item" onClick={() => handleNavigation('/settings')}>
             <a href="#" className="sidebar-link">
               <i className="lni lni-cog"></i>
               <span>Settings</span>
             </a>
-          </li>
+          </li> */}
+
+<div className="breadcrumbs">
+  <BackButton />
+  <span className="breadcrumb-divider">/</span>
+  <span>Current Page</span>
+</div>
         </ul>
         <div className="sidebar-footer" onClick={() => handleNavigation('/')}>
           <a href="#" className="sidebar-link">
