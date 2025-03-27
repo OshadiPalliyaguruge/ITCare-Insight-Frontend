@@ -322,13 +322,6 @@
   background: rgba(52, 152, 219, 0.1);
 }
 
-.ps-chatbox-container {
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  margin-top: 2rem;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .ps-grid {

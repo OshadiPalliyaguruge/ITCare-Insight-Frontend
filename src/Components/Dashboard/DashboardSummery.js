@@ -177,7 +177,7 @@ const DashboardSummary = ({ data }) => {
       description: "Recommended responses and solutions",
       icon: "💬",
       className: "card-suggestions",
-      path: "/Q&A"
+      path: "/suggestions"
     }
   ];
 

@@ -73,6 +73,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import DashboardSummary from "./Components/Dashboard/DashboardSummery"
 import DashboardAnalytics from "./Components/Dashboard/DashboardAnalytics";
+import AnswerSuggesstions from "./Components/AnswerSuggesstions/AnswerSuggesstions"
 
 const App = () => {
     const [data, setData] = useState([]);
@@ -106,7 +107,7 @@ const App = () => {
 // Separate component to manage layout and conditional background
 const AppContent = ({ data }) => {
     const location = useLocation();
-    const pagesWithBackgroundImage = ["/Q&A", "/predictions","/dashboard","/report"]; // Define pages that need the background image
+    const pagesWithBackgroundImage = []; // Define pages that need the background image
     const useBackgroundImage = pagesWithBackgroundImage.includes(location.pathname);
     
     // Hide sidebar when on Profile page ("/")
@@ -121,6 +122,7 @@ const AppContent = ({ data }) => {
                     <Route path="/analytics" element={<DashboardAnalytics data={data} />} />
                     {/* <Route path="/dashboard" element={<Dashboard data={data} />} /> */}
                     <Route path="/Q&A" element={<ProblemsSolutions />} />
+                    <Route path="/suggestions" element={<AnswerSuggesstions />} />
                     <Route path="/predictions" element={<Predictions />} />
                     <Route path="/" element={<Profile />} />
                     <Route path="/report" element={<Report />} />

@@ -463,10 +463,6 @@ const ProblemsSolutions = () => {
           </div>
         ))}
       </div>
-
-      <div className="ps-chatbox-container">
-        <Chatbox />
-      </div>
     </div>
   );
 };

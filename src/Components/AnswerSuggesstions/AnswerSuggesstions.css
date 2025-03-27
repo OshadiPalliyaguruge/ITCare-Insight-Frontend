@@ -1,0 +1,62 @@
+
+   /* ProblemsSolutions.css */
+   .ps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .ps-main-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .ps-main-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #277575, #6d768d);
+  }
+  
+  .ps-action-btn {
+    background: none;
+    border: none;
+    color: #3498db;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+  
+  .ps-action-btn:hover {
+    background: rgba(52, 152, 219, 0.1);
+  }
+  
+  .ps-chatbox-container {
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ps-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .ps-container {
+      padding: 1rem;
+    }
+  }
+  
